@@ -1,0 +1,11 @@
+const mongoose = require('mongoose')
+async function connect() {
+    try {
+        await mongoose.connect('mongodb://localhost:27017/bookData2026')
+       console.log("Database Connected.")
+    } catch {
+        console.log(err)
+    }
+}
+
+module.exports = connect

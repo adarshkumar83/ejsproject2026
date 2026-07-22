@@ -1,0 +1,31 @@
+<%-include('./base/header.ejs') %>
+<div class="container">
+    <div class="row mt-1">
+        <h2 class="text-center text-danger">List of Books</h2>
+        <table class="table text-center">
+            <tr>
+                <th>Book Name</th>
+                <th>Author Name</th>
+                <th>Publisher</th>
+                <th>Book Category</th>
+                <th>Publish Date</th>
+                <th>Want to Keep ?</th>
+            </tr>
+            <% books.forEach((book) => { %>
+                    <tr>
+                        <td><%= book.bookName %></td>
+                        <td><%= book.author %></td>
+                        <td><%= book.publisher %></td>
+                        <td><%= book.category %></td>
+                        <td><%= book.publishDate %></td>
+                        <td>
+                            <a href='/book/edit/page/<%=book._id%>' class="btn btn-primary">Yes</a>
+                            <a href='/book/delete/<%=book._id%>' class="btn btn-danger">No</a>
+                        </td>
+                    </tr>
+                <% }) %>
+        </table>
+    </div>
+</div>
+
+<%-include('./base/footer.ejs') %>

@@ -1,0 +1,40 @@
+<%-include('./base/header.ejs') %>
+   <div class="container">
+      <div class="alert bg-success my-2">
+          <h4 class="text-center text-white">Add Book</h4>
+      </div>
+   </div>
+   <div class="container">
+       <div class="border border-2 rounded p-3">
+           <div class="col"></div>
+           <div class="col">
+            <form action="/add/book" method="post">
+               <div class="mt-1">
+                  <label class="form-label">Book Name<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" placeholder="Book Name.." name="bookName" required>
+               </div>
+               <div class="mt-1">
+                  <label class="form-label">Author of Book<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" placeholder="Author name.." name="author" required>
+               </div>
+               <div class="mt-1">
+                  <label class="form-label">Publisher of Book<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" placeholder="Publisher Name.." name="publisher" required>
+               </div>
+               <div class="mt-1">
+                  <label class="form-label">Book Category<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" placeholder="Novel, Story etc.." name="category" required>
+               </div>
+               <div class="mt-1">
+                  <label class="form-label">Publish Date of Book<span class="text-danger">*</span></label>
+                  <input type="date" class="form-control" placeholder="Enter date of Publish.." name="publishDate" required>
+               </div>
+               <input type="submit" class="btn btn-success mt-2" value="Add Book">
+               <button type="reset" class="btn btn-danger mt-2">Reset</button>
+            </form>
+           </div>
+           
+           <div class="col"></div>
+       </div>
+   </div>
+<%-include('./base/footer.ejs') %>

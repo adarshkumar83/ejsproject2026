@@ -1,0 +1,40 @@
+<%-include('./base/header.ejs') %>
+   <div class="container">
+      <div class="alert bg-success my-3">
+          <h4 class="text-center text-white">Edit Student</h4>
+      </div>
+   </div>
+   <div class="container">
+       <div class="row">
+           <div class="col"></div>
+           <div class="col">
+            <form action="/edit/book/<%=book._id%>" method="post">
+               <div class="mt-1">
+                  <label class="form-label">Book Name</label>
+                  <input type="text" class="form-control" placeholder="Book Name.." name="bookName" value="<%=book.bookName%>">
+               </div>
+               <div class="mt-1">
+                  <label class="form-label">Author</label>
+                  <input type="text" class="form-control" placeholder="Author name.." name="author" value="<%=book.author%>">
+               </div>
+               <div class="mt-1">
+                  <label class="form-label">Publisher</label>
+                  <input type="text" class="form-control" placeholder="Publisher Name.." name="publisher" value="<%=book.publisher%>">
+               </div>
+               <div class="mt-1">
+                  <label class="form-label">Category</label>
+                  <input type="text" class="form-control" placeholder="Book Category.." name="category" value="<%=book.category%>">
+               </div>
+               <div class="mt-1">
+                  <label class="form-label">Book Publish Date</label>
+                  <input type="text" class="form-control" placeholder="Enter Publish Date.." name="publishDate" value="<%=book.publishDate%>">
+               </div>
+               <input type="submit" class="btn btn-success mt-2" value="Save">
+               <a href="/books" class="btn btn-danger mt-2">Cancel</a>
+            </form>
+           </div>
+           
+           <div class="col"></div>
+       </div>
+   </div>
+<%-include('./base/footer.ejs') %>
