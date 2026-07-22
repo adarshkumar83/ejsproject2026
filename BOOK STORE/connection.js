@@ -3,7 +3,7 @@ async function connect() {
     try {
         await mongoose.connect('mongodb://localhost:27017/bookData2026')
        console.log("Database Connected.")
-    } catch {
+    } catch (err) {
         console.log(err)
     }
 }
